@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+        <title>Material Weight Calculator</title>
+        <link rel="stylesheet" href="./styles.css">
+    </head>
+    <body>
+        <header></header>
+        <main>
+            <div class="container">
+                <form action="#" method="post" id="form">
+                    <div class="box-item">
+                        <div class="box-label">
+                            <label for="cross-section">Cross Section</label>
+                        </div>
+                        <div class="box-input">
+                            <select id="cross-section" name="cross-section" required>
+                                <option value="">-- Select a cross-section --</option>
+                                <option>Rod</option>
+                                <option>Sheet</option>
+                                <option>Plate</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-label"></div>
+                        <div class="box-input">
+                            <img src="./assets/images/round.gif" id="cross-section-image" class="hidden" alt="Round" width="150px" />
+                        </div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-label">
+                            <label for="material">Material</label>
+                        </div>
+                        <div class="box-input">
+                            <select id="material" name="material" aria-label="Select the material" required>
+                                <option value="">-- Select a material --</option>
+                                <option value="ti">Titanium</option>
+                                <option value="ta">Tantalum</option>
+                                <option value="zr">Zirconium</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-label">
+                            <label for="density">Density</label>
+                        </div>
+                        <div class="box-input">
+                            <input type="text" id="density" name="density" required />
+                            <select id="density-unit" aria-label="Select an unit">
+                                <option value="g">g/cm³</option>
+                                <!-- <option value="kg">kg/m³</option> -->
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-label">
+                            <label for="quantity">Quantity (number of pieces)</label>
+                        </div>
+                        <div class="box-input">
+                            <input type="text" id="quantity" name="quantity" required>
+                        </div>
+                    </div>
+                    <div class="box-item hidden" id="div-thickness">
+                        <div class="box-label">
+                            <label for="thickness">Thickness (T)</label>
+                        </div>
+                        <div class="box-input">
+                            <input type="text" id="thickness" name="thickness" value="0" required>
+                            <select id="unit-thickness" aria-label="Select and unit">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>in</option>
+                                <option>ft</option>
+                                <option>m</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-item hidden" id="div-diameter">
+                        <div class="box-label">
+                            <label for="diameter">Diameter (D)</label>
+                        </div>
+                        <div class="box-input">
+                            <input type="text" id="diameter" name="diameter" value="0" required>
+                            <select id="unit-diameter" aria-label="Select and unit">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>in</option>
+                                <option>ft</option>
+                                <option>m</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-item hidden" id="div-width">
+                        <div class="box-label">
+                            <label for="width">Width (W)</label>
+                        </div>
+                        <div class="box-input">
+                            <input type="text" id="width" name="width" value="0" required>
+                            <select id="unit-width" aria-label="Select and unit">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>in</option>
+                                <option>ft</option>
+                                <option>m</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-item" id="div-length">
+                        <div class="box-label">
+                            <label for="length">Length (L)</label>
+                        </div>
+                        <div class="box-input">
+                            <input type="text" id="length" name="length" value="0" required>
+                            <select id="unit-length" aria-label="Select and unit">
+                                <option>mm</option>
+                                <option>cm</option>
+                                <option>in</option>
+                                <option>ft</option>
+                                <option>m</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-label"></div>
+                        <div class="box-input">
+                            <button type="submit" id="submit">Calculate</button>
+                            <button type="reset">Reset</button>
+                        </div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-label">
+                            <label for="weight-kg">Total Weight (kg)</label>
+                        </div>
+                        <div class="box-input">
+                            <input type="text" id="weight-kg" name="weight-kg" class="result" readonly />
+                        </div>
+                    </div>
+                    <div class="box-item">
+                        <div class="box-label">
+                            <label for="weight-lbs">Total Weight (lbs)</label>
+                        </div>
+                        <div class="box-input">
+                            <input type="text" id="weight-lbs" name="weight-lbs" class="result" readonly />
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </main>
+        <footer></footer>
+        <script src="./scripts.js"></script>
+    </body>
+</html>
